@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bengal Distilleries, Kharagpur</title>
+    <meta name="description" content="Bengal Distilleries brews first and distils next. Heimer Strong, an imperial amber ale with nolen gur, launches from Kharagpur, West Bengal, ahead of a barrel-aged spirits range." />
+    <meta name="theme-color" content="#14281D" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <script>
+      // Apply the stored theme before first paint. Light is the default.
+      (function () {
+        try {
+          var t = localStorage.getItem("bd-theme");
+          if (t === "dark" || t === "light") document.documentElement.dataset.theme = t;
+          if (localStorage.getItem("bd-age-verified") !== "yes") document.documentElement.dataset.gate = "open";
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

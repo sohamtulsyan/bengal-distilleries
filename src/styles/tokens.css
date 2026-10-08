@@ -1,0 +1,79 @@
+/* Palette from the brand brief. Components read only the semantic tokens below. */
+:root {
+  --pine: #14281d;
+  --pine-deep: #0d1c14;
+  --gold: #deb841;
+  --crimson: #a30000;
+  --white: #ffffff;
+  --off-white: #f9f9fb;
+  --paper: #fffcff;
+  --copper: #b8743a;
+  --amber: #c9781c;
+
+  --font-display: "Rozha One", "Georgia", serif;
+  --font-sans: "Archivo Variable", "Archivo", system-ui, sans-serif;
+  --font-bengali: "Galada", "Noto Sans Bengali", serif;
+
+  /* Type scale: ratio ~1.25, display steps jump harder */
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.25rem;
+  --step-2: 1.5625rem;
+  --step-3: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);
+  --step-4: clamp(2.25rem, 1.6rem + 2.6vw, 3.75rem);
+  --step-5: clamp(2.75rem, 1.6rem + 5vw, 6rem);
+
+  --gutter: clamp(16px, 4vw, 40px);
+  --max: 1240px;
+  /* Sharp corners throughout. */
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius: 0;
+  --radius-lg: 0;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --header-h: 72px;
+  --banner-h: 48px;
+
+  /* Light theme (default) */
+  --bg: var(--white);
+  --bg-alt: #f8faf8;
+  --surface: var(--white);
+  --surface-warm: color-mix(in srgb, var(--gold) 9%, var(--white));
+  --text: var(--pine);
+  --text-muted: color-mix(in srgb, var(--pine) 76%, var(--white));
+  --border: color-mix(in srgb, var(--pine) 12%, transparent);
+  --border-strong: color-mix(in srgb, var(--pine) 26%, transparent);
+  --accent-text: var(--crimson);
+  --focus: var(--crimson);
+  --header-bg: color-mix(in srgb, var(--white) 78%, transparent);
+  --glow: color-mix(in srgb, var(--gold) 55%, transparent);
+  --shadow: 0 1px 2px rgb(20 40 29 / 0.06), 0 8px 24px -12px rgb(20 40 29 / 0.18);
+  --band-bg: var(--pine);
+  --band-text: var(--paper);
+  --band-muted: color-mix(in srgb, var(--paper) 74%, var(--pine));
+  --band-card: var(--pine-deep);
+  --band-border: color-mix(in srgb, var(--gold) 22%, transparent);
+  --input-bg: var(--off-white);
+  --scheme: light;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: var(--pine);
+  --bg-alt: #112319;
+  --surface: var(--pine-deep);
+  --surface-warm: color-mix(in srgb, var(--gold) 7%, var(--pine-deep));
+  --text: var(--paper);
+  --text-muted: color-mix(in srgb, var(--paper) 74%, var(--pine));
+  --border: color-mix(in srgb, var(--gold) 20%, transparent);
+  --border-strong: color-mix(in srgb, var(--gold) 38%, transparent);
+  --accent-text: var(--gold);
+  --focus: var(--gold);
+  --header-bg: color-mix(in srgb, var(--pine) 74%, transparent);
+  --glow: color-mix(in srgb, var(--gold) 45%, transparent);
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 10px 30px -12px rgb(0 0 0 / 0.55);
+  --band-bg: var(--pine-deep);
+  --band-card: #091510;
+  --input-bg: color-mix(in srgb, var(--pine-deep) 70%, var(--pine));
+  color-scheme: dark;
+}
